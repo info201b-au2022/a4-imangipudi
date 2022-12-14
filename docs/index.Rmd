@@ -1,7 +1,7 @@
 ---
-title: "Your A4 Report Title (TODO: Revise title)"
-author: "Your Name"
-date: '2022-11-01'
+title: "Trends in Incarceration Inequality"
+author: "Ira Mangipudi"
+date: '2022-11-024'
 output: html_document
 ---
 
@@ -11,21 +11,7 @@ source("../source/analysis.R")
 ```
 
 ## Abstract 
-[TODO: Include a short abstract (about 50 words)]
-
-# Test (TODO: Remove before submission!!)
-```{r echo=FALSE}
-q1_string <- test_query1()
-num <- 5
-```
-As you know, this is a markdown report. The [R Markdown Cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf) is **useful!**
-
-* Here's a test of a dynamic variable. Say **"`r q1_string`!!!** 
-* Here's another test. A vector
-of numbers: `r test_query2(num)`.
-
-Recall that _{r echo=TRUE}_ can be used to display the code, 
-which is very useful when developing and debugging a report. Here's an example: 
+The main question that is explored through this report are "What inequalities are present in the jail/prison system? This report delves into inequalities from gender, race, and states in the prison system. We  what gender has a higher incarceration, what race is unproportionately incarcerated higher than others, and to what state has the highest incareration of a certain gender?
 
 ```{r echo=TRUE}
 num <- 5
@@ -34,12 +20,27 @@ print(sum)
 ```
 
 ## Introduction 
-[TODO]
+Since the 1970s, the amount of people that have been incarcerated has quadrupled nationwide, from 1970 to 2014, the number of people incarcerated increased from 157,000 to 690,000 and from there on the numbers have quadrupled. Incarceration has grown the most in small and mid-sized counties as opposed to the largest. Just in the spring of 2021, an estimated 1.8 people were incarcerated in the United States. The jail populations have decreased in the nation's biggest cities but have dramatically escalated in the smaller counties. This is an important issue because just in 2021 alone approximately .054% of the US population was incarcerated. There is a wide variation in racial disparities as well as rates of incarceration, certain races are incarcerated at a much higher rate than others. Direct stakeholders can be people who are incarcerated as well as people in communities that are incarcerated at much higher rates than others. Indirect stakeholders can be politicians who need to address such issues as well as the administration in prisons/jails. This brings us to questions of what are the nationwide incarceration trends? What state has had the largest number of incarcerations? How does the quantity of incarcerations differ between males and females? How does it differ from race?
+
 
 ## Data Summary 
-[TODO]
+The jail population has drastically transformed over the past couple of years, from the change in the female to male ratio to the geographical variations from even the smaller counties to the state as a whole. To further our understanding, we will explore the difference between the male and female jail population as well as which state has the greatest number of each. Through the exploration of the dataset, we have discovered that in 2018, in California, specifically Los Angeles county has the largest population of men in jail. The number of men in jail in this county is 14,901. In comparison the amount of women in jail in this same county is shown as 2137 which is also the largest number in California. Through this comparison we can see that men are incarcerated at a higher number than women. 
 
-[TODO ... other sections ... See Canvas for details]
 
-_All the very best with your work!_
+## Growth of the U.S Prison Population
+```{r increase_of_jail_population, echo = FALSE}
+plot(increase_of_jail_population)
+```
+This bar graph demonstrates that as the years progress, the total jail population increases drastically. From 1970 to 1980, the levels look pretty steady but from there on there is a steep incline till about 2015 from which after that point it seemingly steadies out till 2020. 
 
+## Growth of Prison Population by State
+```{r growth_of_prison_pop_state, echo = FALSE}
+plot(growth_of_prison_pop_state)
+```
+This line chart shows the difference between the jail population by states. We can use this to make a comparison between states and know any disparities or what state has a higher incarceration rate than others. 
+
+## Comparison of Black Jail Proportion vs White Jail Proportion in 
+```{r bar_of_race_proportion, echo = FALSE}
+plot(bar_of_race_proportion)
+```
+This bar graph shows us the clear racial disparities between the black and white community. We can instantly tell the difference and come to the conclusion that the black population is incarcerated at a far higher rate than the white population is. 
